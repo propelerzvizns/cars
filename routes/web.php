@@ -24,14 +24,14 @@ Route::get('/', function () {
     $name = "to Cars Project";
     $age = 33;
     return view('welcome', compact('name', 'age'));
-});
+})->name('home');
 
 Route::get('/about', function(){
     
     return view('about');
 });
 
-Route::get('/cars', 'CarsController@index');
+Route::get('/cars', 'CarsController@index')->name('cars');
 Route::get('/cars/{id}', 'CarsController@show')->name('oneCar');
 
 
