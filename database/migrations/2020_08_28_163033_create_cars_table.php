@@ -13,7 +13,7 @@ class CreateCarsTable extends Migration
      */
     public function up()
     {
-        //Polja u tabeli: id, title, producer, number_of_doors
+     
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
             $table->string('title');

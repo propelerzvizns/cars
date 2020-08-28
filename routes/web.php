@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Dodati akciju index u ‘CarsController’ i rutu “/cars” koja izrvrsava ovu akciju
+// Unutar akcije dobaviti sve automobile iz baze preko klase Car i proslediti u view fajl
+// Kreirati view fajl i ispisati u njemu nazive automobila koristeci blade sintaksu
+// Komitovati urađeno
+
+
 Route::get('/', function () {
     $name = "to Cars Project";
     $age = 33;
@@ -23,3 +30,5 @@ Route::get('/about', function(){
     
     return view('about');
 });
+
+Route::get('/cars', 'CarsController@index');
